@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.example.Person" table="Person">
+		<id name="id" type="java.lang.Integer"><!--Corrsponds to the id variable from java class  -->
+			<column name="id"></column> <!-- Corresponds to column id from the Person table -->
+			<generator class="increment"></generator>
+		</id>
+		<property name="FirstName" type="string"><!--Corrsponds to the FirstName variable from java class  -->
+			<column name="FirstName" length="250" not-null="false" unique="false"></column><!-- Corresponds to column FirstName from the Person table -->
+		</property>
+		<property name="LastName" type="string">
+			<column name="LastName" length="250" not-null="false" unique="false"></column>
+		</property>
+		<property name="Email" type="string">
+			<column name="Email" length="250" not-null="false" unique="false"></column>
+		</property>
+		<property name="Password" type="string">
+			<column name="Password" length="250" not-null="false" unique="false"></column>
+		</property>
+		<property name="UserName" type="string">
+			<column name="UserName" length="250" not-null="false" unique="false"></column>
+		</property>
+	</class>
+</hibernate-mapping>
